@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --pm-bg: #f4efe6;
+  --pm-bg-alt: #efe8db;
+  --pm-surface: #fffaf2;
+  --pm-surface-soft: #f7ecdd;
+  --pm-text: #2e2a27;
+  --pm-text-muted: #6a625b;
+  --pm-border: #e7d9c9;
+  --pm-border-strong: #d8cab6;
+  --pm-primary: #d97706;
+  --pm-primary-hover: #b45309;
+  --pm-secondary: #0f766e;
+  --pm-secondary-hover: #115e59;
+  --pm-danger: #b91c1c;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--pm-text);
+  background: radial-gradient(circle at 15% 0%, #f9f3e7 0%, var(--pm-bg) 55%, var(--pm-bg-alt) 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.bg-blue-600 {
+  background-color: var(--pm-primary) !important;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: var(--pm-primary-hover) !important;
+}
+
+.bg-slate-200 {
+  background-color: var(--pm-surface-soft) !important;
+}
+
+.hover\:bg-slate-300:hover {
+  background-color: #eedfcf !important;
+}
+
+.bg-white {
+  background-color: var(--pm-surface) !important;
+}
+
+.border-slate-200 {
+  border-color: var(--pm-border) !important;
+}
+
+.border-slate-300 {
+  border-color: var(--pm-border-strong) !important;
+}
+
+.text-slate-900,
+.text-slate-800 {
+  color: var(--pm-text) !important;
+}
+
+.text-slate-700,
+.text-slate-600,
+.text-slate-500 {
+  color: var(--pm-text-muted) !important;
+}
+
+.pm-products-table thead th {
+  background: #f2e7d8;
+  color: #5f554d !important;
+  border-bottom-color: var(--pm-border) !important;
+}
+
+.pm-products-table tbody td {
+  border-bottom-color: #efe1d1 !important;
+}
+
+.pm-products-table tbody tr:hover {
+  background: #fff4e3;
+}
+
+.pm-category-tag {
+  display: inline-block;
+  border: 1px solid #d8cab6;
+  background: #f8ecdd;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  color: #6b4f32;
+  font-weight: 700;
+}
+
+.pm-btn-secondary {
+  background: var(--pm-secondary);
+}
+
+.pm-btn-secondary:hover {
+  background: var(--pm-secondary-hover);
+}
+
+.pm-btn-danger {
+  background: var(--pm-danger);
+}
+
+.pm-btn-danger:hover {
+  background: #991b1b;
+}
+
+.pm-btn-green {
+  background: var(--pm-secondary) !important;
+}
+
+.pm-btn-green:hover {
+  background: var(--pm-secondary-hover) !important;
+}
+
+.pm-products-table section[class*="bg-slate-50"] {
+  background: #f2e7d8 !important;
+  border-color: var(--pm-border) !important;
+}

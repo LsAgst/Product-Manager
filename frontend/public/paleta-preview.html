@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview de Paleta</title>
+    <style>
+      :root {
+        --bg: #f4efe6;
+        --surface: #fffaf2;
+        --text: #2e2a27;
+        --muted: #6a625b;
+        --primary: #d97706;
+        --primary-strong: #b45309;
+        --secondary: #0f766e;
+        --accent: #c2410c;
+        --success: #166534;
+        --warning: #b45309;
+        --danger: #b91c1c;
+        --border: #e7d9c9;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        background: radial-gradient(circle at 10% 0%, #f9f3e7 0%, #f4efe6 55%, #efe8db 100%);
+        color: var(--text);
+      }
+
+      .wrap {
+        width: min(980px, calc(100% - 24px));
+        margin: 24px auto 32px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(1.5rem, 2.4vw, 2rem);
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .grid {
+        margin-top: 18px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+
+      .swatch {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        background: var(--surface);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      }
+
+      .color {
+        height: 88px;
+      }
+
+      .meta {
+        padding: 10px;
+        display: grid;
+        gap: 4px;
+      }
+
+      .name {
+        font-weight: 700;
+      }
+
+      .hex {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .demo {
+        margin-top: 18px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: var(--surface);
+        padding: 14px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .btn-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      button {
+        border: 0;
+        border-radius: 9px;
+        padding: 10px 14px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .primary { background: var(--primary); color: #fff; }
+      .primary:hover { background: var(--primary-strong); }
+      .secondary { background: var(--secondary); color: #fff; }
+      .danger { background: var(--danger); color: #fff; }
+      .ghost { background: #efe3d4; color: var(--text); }
+
+      .alerts {
+        display: grid;
+        gap: 8px;
+      }
+
+      .table-wrap {
+        margin-top: 18px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        background: var(--surface);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      thead th {
+        text-align: left;
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #5f554d;
+        background: #f2e7d8;
+        border-bottom: 1px solid var(--border);
+        padding: 10px;
+      }
+
+      tbody td {
+        padding: 10px;
+        border-bottom: 1px solid #efe1d1;
+        vertical-align: top;
+      }
+
+      tbody tr:hover {
+        background: #fff4e3;
+      }
+
+      .sku {
+        font-family: Consolas, monospace;
+        font-size: 0.86rem;
+        color: #4b5563;
+      }
+
+      .price {
+        font-weight: 700;
+        color: var(--secondary);
+      }
+
+      .actions {
+        display: flex;
+        gap: 6px;
+      }
+
+      .tag {
+        border: 1px solid #d8cab6;
+        background: #f8ecdd;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        padding: 3px 8px;
+        color: #6b4f32;
+      }
+
+      .alert {
+        border-radius: 10px;
+        padding: 10px 12px;
+        border: 1px solid transparent;
+        font-weight: 600;
+      }
+
+      .ok { background: #dcfce7; border-color: #86efac; color: #166534; }
+      .warn { background: #fef3c7; border-color: #fcd34d; color: #92400e; }
+      .err { background: #fee2e2; border-color: #fca5a5; color: #991b1b; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Paleta Recomendada: Terracota + Teal</h1>
+      <p>Equilíbrio entre visual moderno, legibilidade e identidade quente/profissional.</p>
+
+      <section class="grid">
+        <article class="swatch"><div class="color" style="background:#f4efe6"></div><div class="meta"><div class="name">Fundo</div><div class="hex">#F4EFE6</div></div></article>
+        <article class="swatch"><div class="color" style="background:#fffaf2"></div><div class="meta"><div class="name">Superfície</div><div class="hex">#FFFAF2</div></div></article>
+        <article class="swatch"><div class="color" style="background:#2e2a27"></div><div class="meta"><div class="name">Texto Principal</div><div class="hex">#2E2A27</div></div></article>
+        <article class="swatch"><div class="color" style="background:#6a625b"></div><div class="meta"><div class="name">Texto Secundário</div><div class="hex">#6A625B</div></div></article>
+        <article class="swatch"><div class="color" style="background:#d97706"></div><div class="meta"><div class="name">Primária</div><div class="hex">#D97706</div></div></article>
+        <article class="swatch"><div class="color" style="background:#0f766e"></div><div class="meta"><div class="name">Secundária</div><div class="hex">#0F766E</div></div></article>
+        <article class="swatch"><div class="color" style="background:#c2410c"></div><div class="meta"><div class="name">Accent</div><div class="hex">#C2410C</div></div></article>
+        <article class="swatch"><div class="color" style="background:#e7d9c9"></div><div class="meta"><div class="name">Borda</div><div class="hex">#E7D9C9</div></div></article>
+      </section>
+
+      <section class="demo">
+        <div class="btn-row">
+          <button class="primary">Salvar</button>
+          <button class="secondary">Filtrar</button>
+          <button class="ghost">Cancelar</button>
+          <button class="danger">Excluir</button>
+        </div>
+
+        <div class="alerts">
+          <div class="alert ok">Sucesso: item salvo com êxito.</div>
+          <div class="alert warn">Aviso: revise os campos obrigatórios.</div>
+          <div class="alert err">Erro: não foi possível concluir a operação.</div>
+        </div>
+      </section>
+
+      <section class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>SKU</th>
+              <th>Categoria</th>
+              <th>Preço</th>
+              <th>Estoque</th>
+              <th>Atualizado</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Notebook Orion 14</strong><br />
+                <span style="color:#6a625b">Processador i7, 16GB RAM, SSD 512GB</span>
+              </td>
+              <td class="sku">ORION1-021</td>
+              <td><span class="tag">Eletrônicos</span></td>
+              <td class="price">R$ 5.499,90</td>
+              <td>12</td>
+              <td>24/04/2026 15:40</td>
+              <td>
+                <div class="actions">
+                  <button class="secondary">Editar</button>
+                  <button class="danger">Excluir</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Garrafa Térmica Vento</strong><br />
+                <span style="color:#6a625b">Aço inox, 750ml, tampa antivazamento</span>
+              </td>
+              <td class="sku">GARRAF-087</td>
+              <td><span class="tag">Casa</span></td>
+              <td class="price">R$ 89,90</td>
+              <td>63</td>
+              <td>24/04/2026 14:12</td>
+              <td>
+                <div class="actions">
+                  <button class="secondary">Editar</button>
+                  <button class="danger">Excluir</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
